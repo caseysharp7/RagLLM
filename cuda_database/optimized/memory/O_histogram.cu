@@ -1,3 +1,5 @@
+// This is not my code, this comes from NVIDIA's "CUDA C++ Programming Guide"
+
 #include <cooperative_groups.h>
 
 // Distributed Shared memory histogram kernel
