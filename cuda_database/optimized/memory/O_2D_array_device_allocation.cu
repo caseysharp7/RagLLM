@@ -1,3 +1,4 @@
+// This is not my code, this comes from NVIDIA's "CUDA C++ Programming Guide"
 /* 
 This code allocates enough memory for a 2 dimensional array with integers for the device. To optimize 
 the code, reference this optimized code and allocate memory using cudaMallocPitch to create a 2 
