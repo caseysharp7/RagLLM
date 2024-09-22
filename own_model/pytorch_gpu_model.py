@@ -21,16 +21,16 @@ class network(nn.Module):
         self.fc7 = lin(64, 32)
         self.fc8 = lin(32, 1)
     
-    def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        x = torch.selu(self.fc2(x))
-        x = torch.relu(self.fc3(x))
-        x = torch.selu(self.fc4(x))
-        x = torch.relu(self.fc5(x))
-        x = torch.selu(self.fc6(x))
-        x = torch.relu(self.fc7(x))
-        x = self.fc8(x)
-        return x
+    def forward(self, i):
+        x = torch.relu(self.fc1(i))
+        x = torch.selu(self.fc2(i))
+        x = torch.relu(self.fc3(i))
+        x = torch.selu(self.fc4(i))
+        x = torch.relu(self.fc5(i))
+        x = torch.selu(self.fc6(i))
+        x = torch.relu(self.fc7(i))
+        x = self.fc8(i)
+        return i
 
 model = network().to(dev)
 
