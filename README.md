@@ -9,3 +9,6 @@ allow the LLM to introduce optimizations, whether it be memory management or dat
 
 Much of this project has been experimental, so there is additional code in this repository, like my own transformer model, the code to run the LLM parallel between the two 
 4090s I work on, and the code used to embed the examples.
+
+This repository is a work in progress, so some of the cuda examples won't be present as they are still in development because I have to find quality optimized cuda and then
+hand code it back to an unoptimized and inefficient state. This is with the assumption that the user input code will be in similar unoptimized states.
