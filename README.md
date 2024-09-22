@@ -14,5 +14,4 @@ This repository is a work in progress, so some of the cuda examples won't be pre
 hand code it back to an unoptimized and inefficient state. This is with the assumption that the user input code will be in similar unoptimized states.
 
 As the optimized examples are generally not of my own creation, I will explicitly state that I did not write that code and tell where it did come from, most of which come from
-NVIDIA themselves. The unoptimized examples are my own code, but they are designed to do the same thing as the optimized examples, just less efficiently. This being said, for
-my own benefit I have spent likely a majority of the time on this project working to understand the optimized examples and how they map to the GPU hardware.
+NVIDIA themselves. The unoptimized examples are for the most part my own code, but they are designed to do the same thing as the optimized examples, just less efficiently. This being said, for my own benefit I have spent likely a majority of the time on this project working to understand the optimized examples and how they map to the GPU hardware.
