@@ -1,10 +1,10 @@
-__global__ void func1(int *var1, int *var2, int var3)
+__global__ void histogram(int *input_data, int *bins, int size)
 {
-    int var4 = blockDim.x * blockIdx.x + threadIdx.x;
+    int i = blockDim.x * blockIdx.x + threadIdx.x;
 
-    if(var3 > var4){
-        int var5 = var1[var4];
+    if(size > i){
+        int memory = input_data[i];
 
-        atomicAdd(&var2[var5], 1);
+        atomicAdd(&bins[memory], 1);
     }
 }
