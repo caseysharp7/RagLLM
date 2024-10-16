@@ -1,11 +1,12 @@
-# experimental creation of my own model as training my model on purely CUDA could make the retrieval system significantly simpler, opted against as no means of training on 
-# large amounts of data
+# experimental creation of my own model as training my model on purely CUDA could make the retrieval
+# system significantly simpler, opted against as no means of training on large amounts of data
 import numpy as np
 
 import torch
 import torch.nn as nn
 import torch.optim as opt
 from torch.nn import Linear as lin
+import torch.nn.functional as func
 
 dev = torch.device("cuda")
 
@@ -22,15 +23,15 @@ class network(nn.Module):
         self.fc8 = lin(32, 1)
     
     def forward(self, i):
-        x = torch.relu(self.fc1(i))
-        x = torch.selu(self.fc2(i))
-        x = torch.relu(self.fc3(i))
-        x = torch.selu(self.fc4(i))
-        x = torch.relu(self.fc5(i))
-        x = torch.selu(self.fc6(i))
-        x = torch.relu(self.fc7(i))
-        x = self.fc8(i)
-        return i
+        x = func.leaky_relu(self.fc1(i), negative_slope=0.05)
+        x = func.leaky_relu(self.fc2(x), negative_slope=0.05)
+        x = func.leaky_relu(self.fc3(x), negative_slope=0.05)
+        x = func.leaky_relu(self.fc4(x), negative_slope=0.05)
+        x = func.leaky_relu(self.fc5(x), negative_slope=0.05)
+        x = func.leaky_relu(self.fc6(x), negative_slope=0.05)
+        x = func.leaky_relu(self.fc7(x), negative_slope=0.05)
+        x = self.fc8(x)
+        return x
 
 model = network().to(dev)
 
