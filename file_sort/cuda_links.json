@@ -1,7 +1,7 @@
 [
     {
-        "2D_array_device_allocation": "/home/sharpcj/my_cuda/unoptimized/memory/2D_array_allocation.cu",
-        "O_2D_array_device_allocation": "/home/sharpcj/my_cuda/optimized/memory/O_2D_array_allocation.cu",
+        "2D_array_device_allocation": "/home/my_cuda/unoptimized/memory/2D_array_allocation.cu",
+        "O_2D_array_device_allocation": "/home/my_cuda/optimized/memory/O_2D_array_allocation.cu",
         "Link": "2D array optimization pair"
     }
 ]
