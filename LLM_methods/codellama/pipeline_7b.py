@@ -1,4 +1,4 @@
-# attempt at running the model at full precision split between two gpus. Clearly, the work is still in progress
+# attempt at running the model at full precision split between two gpus, the work is still in progress
 import torch
 import torch.distributed
 from transformers import AutoModelForCausalLM, AutoTokenizer
